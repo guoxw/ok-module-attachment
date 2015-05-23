@@ -16,7 +16,7 @@ import cn.c.module.attachment.annotation.AttachmentField;
 import cn.c.module.attachment.domain.Associate;
 import cn.c.module.attachment.util.AttachmentUtil;
 
-public class FileAspect {
+public class AttachmentAspect {
 	public void associateEntity(IdEntity entity) {
 		
 		Class<?> clazz = entity.getClass();

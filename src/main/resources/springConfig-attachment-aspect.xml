@@ -8,13 +8,13 @@
         http://www.springframework.org/schema/aop 
         http://www.springframework.org/schema/aop/spring-aop.xsd">
         
-	<bean id="fileAspectBean" class="cn.c.module.file.aspect.FileAspect">
+	<bean id="attachmentAspectBean" class="cn.c.module.attachment.aspect.AttachmentAspect">
 	   <!-- configure properties of aspect here as normal -->
 	</bean>
 	<aop:config>
-		<aop:aspect id="fileAspect" ref="fileAspectBean">
-			<aop:pointcut id="fileAspectPointcut" expression="execution(cn.c.core.domain.IdEntity cn.c.core.service.CrudServiceImpl.save(..))"/>
-			<aop:after-returning pointcut-ref="fileAspectPointcut" method="associateEntity" returning="entity"/>
+		<aop:aspect id="attachmentAspect" ref="attachmentAspectBean">
+			<aop:pointcut id="attachmentAspectPointcut" expression="execution(cn.c.core.domain.IdEntity cn.c.core.service.CrudServiceImpl.save(..))"/>
+			<aop:after-returning pointcut-ref="attachmentAspectPointcut" method="associateEntity" returning="entity"/>
 		</aop:aspect>
 	</aop:config>
 
