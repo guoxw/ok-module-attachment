@@ -1,4 +1,4 @@
-package cn.c.module.file.domain;
+package cn.c.module.attachment.domain;
 
 import java.util.Date;
 
@@ -70,6 +70,9 @@ public class FileInfo extends DateEntity{
 	}
 	public byte[] getFileByte() {
 		return fileByte;
+	}
+	public void setFileByte(byte[] fileByte) {
+		this.fileByte = fileByte;
 	}
 	public String getAccessPath() {
 		return accessPath;

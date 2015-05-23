@@ -1,8 +1,8 @@
-package cn.c.module.file.repository;
+package cn.c.module.attachment.repository;
 
 import org.springframework.data.repository.CrudRepository;
 
-import cn.c.module.file.domain.File;
+import cn.c.module.attachment.domain.File;
 
 public interface FileRepository extends CrudRepository<File, Long>{
 

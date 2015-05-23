@@ -1,4 +1,4 @@
-package cn.c.module.file.repository;
+package cn.c.module.attachment.repository;
 
 import java.util.Date;
 
@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
-import cn.c.module.file.domain.FileInfo;
+import cn.c.module.attachment.domain.FileInfo;
 
 public interface FileInfoRepository extends CrudRepository<FileInfo, Long>{
 

@@ -1,8 +1,12 @@
-package cn.c.module.file.domain;
+package cn.c.module.attachment.domain;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 import cn.c.core.domain.IdEntity;
-import cn.c.core.util.MD5Util;
 
+@Entity
+@Table(name="sys_File")
 public class File extends IdEntity{
 	
 	private static final long serialVersionUID = 1L;
@@ -23,7 +27,6 @@ public class File extends IdEntity{
 	}
 	public void setFileByte(byte[] fileByte) {
 		this.fileByte = fileByte;
-		this.md5 = MD5Util.MD5(this.fileByte);
 	}
 	public String getFilePath() {
 		return filePath;
